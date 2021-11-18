@@ -1,0 +1,29 @@
+﻿@page
+@model cashSpot.Web.Pages.BudgetItems.DeleteModel
+ 
+<h3>Soll der Posten wirklich weg?</h3>
+<div>
+    <h4>Budget-Posten</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BudgetItem.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BudgetItem.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BudgetItem.PlannedMonthlyAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BudgetItem.PlannedMonthlyAmount)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="BudgetItem.Id" />
+        <input type="submit" value="weg jetzt!" class="btn btn-danger" /> |
+        <a asp-page="./Index">zurück zur Übersicht</a>
+    </form>
+</div>
+ 

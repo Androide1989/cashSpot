@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cashSpot", "cashSpot.csproj", "{0F109CFD-65DA-4D02-9D45-7E342C4773A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cashSpot", "cashSpot.csproj", "{0F109CFD-65DA-4D02-9D45-7E342C4773A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cashSpot.Data", "cashSpot.Data\cashSpot.Data.csproj", "{D95E0275-D231-4F1A-922D-1103E9C95CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0F109CFD-65DA-4D02-9D45-7E342C4773A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F109CFD-65DA-4D02-9D45-7E342C4773A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F109CFD-65DA-4D02-9D45-7E342C4773A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95E0275-D231-4F1A-922D-1103E9C95CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95E0275-D231-4F1A-922D-1103E9C95CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95E0275-D231-4F1A-922D-1103E9C95CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95E0275-D231-4F1A-922D-1103E9C95CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
