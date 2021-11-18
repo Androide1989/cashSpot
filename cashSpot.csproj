@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\cashSpot.Data\cashSpot.Data.csproj" />
+    <ProjectReference Include="cashSpot.Data\cashSpot.Data.csproj" />
   </ItemGroup>
 
 </Project>
