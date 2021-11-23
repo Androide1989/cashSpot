@@ -6,19 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace cashSpot.Pages
-{
-    public class IndexModel : PageModel
-    {
+namespace cashSpot.Web.Pages {
+    public class IndexModel : PageModel {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
+        public IndexModel(ILogger<IndexModel> logger) {
             _logger = logger;
         }
 
-        public void OnGet()
-        {
+        public void OnGet() {
 
         }
     }

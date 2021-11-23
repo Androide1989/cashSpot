@@ -1,0 +1,25 @@
+﻿@page
+@model cashSpot.Web.Pages.BudgetItems.DetailsModel
+ 
+<div>
+    <h4>Budget-Posten</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BudgetItem.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BudgetItem.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BudgetItem.PlannedMonthlyAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BudgetItem.PlannedMonthlyAmount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BudgetItem.Id">Ändern</a> |
+    <a asp-page="./Index">zurück zur Übersicht</a>
+</div> 
