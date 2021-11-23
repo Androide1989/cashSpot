@@ -1,0 +1,40 @@
+﻿@page
+@model cashSpot.Pages.MoneyBookings.CreateModel
+
+<h4>MoneyBooking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MoneyBooking.Description" class="control-label"></label>
+                <input asp-for="MoneyBooking.Description" class="form-control" />
+                <span asp-validation-for="MoneyBooking.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoneyBooking.Amount" class="control-label"></label>
+                <input asp-for="MoneyBooking.Amount" class="form-control" />
+                <span asp-validation-for="MoneyBooking.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoneyBooking.RecurringInterval" class="control-label"></label>
+                <select asp-for="MoneyBooking.RecurringInterval" asp-items="Html.GetEnumSelectList<cashSpot.Data.Models.RecurringInterval>()" class="form-control"></select>
+                <span asp-validation-for="MoneyBooking.RecurringInterval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoneyBooking.ReccurdingIntervalMultiplier" class="control-label"></label>
+                <input asp-for="MoneyBooking.ReccurdingIntervalMultiplier" class="form-control" />
+                <span asp-validation-for="MoneyBooking.ReccurdingIntervalMultiplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

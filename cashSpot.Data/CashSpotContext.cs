@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace cashSpot.Data {
     public class CashSpotContext : DbContext {
         public DbSet<BudgetItem> BudgetItem { get; set; }
+        public DbSet<MoneyBooking> MoneyBooking { get; set; }
         public CashSpotContext() { }
 
 
