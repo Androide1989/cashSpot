@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +26,9 @@ namespace cashSpot.Data.Models {
         [Display(Name = "Fixkosten")]
 
         public bool IsReccuring => RecurringInterval != RecurringInterval.None;
+
+        public int? BudgetItemId { get; set; }
+        [ForeignKey(nameof(BudgetItemId))]
+        public BudgetItem BudgetItem { get; set; }
     }
 }

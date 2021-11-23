@@ -1,3 +1,4 @@
+using cashSpot.Core.Services;
 using cashSpot.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,8 +24,7 @@ namespace cashSpot {
         public void ConfigureServices(IServiceCollection services) {
             services.AddRazorPages();
             services.AddDbContext<CashSpotContext>(opt => opt.UseInMemoryDatabase("cashSpot"));
-
-
+            services.AddScoped<IBudgetService, BudgetService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

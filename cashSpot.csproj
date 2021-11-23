@@ -5,9 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="cashSpot.Core\**" />
     <Compile Remove="cashSpot.Data\**" />
+    <Content Remove="cashSpot.Core\**" />
     <Content Remove="cashSpot.Data\**" />
+    <EmbeddedResource Remove="cashSpot.Core\**" />
     <EmbeddedResource Remove="cashSpot.Data\**" />
+    <None Remove="cashSpot.Core\**" />
     <None Remove="cashSpot.Data\**" />
   </ItemGroup>
 
@@ -25,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="cashSpot.Core\cashSpot.Core.csproj" />
     <ProjectReference Include="cashSpot.Data\cashSpot.Data.csproj" />
   </ItemGroup>
 
