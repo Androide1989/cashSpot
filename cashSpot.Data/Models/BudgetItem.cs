@@ -16,7 +16,10 @@ namespace cashSpot.Data.Models {
         [Display(Name = "Tatsächlicher Betrag")]
         [NotMapped]
         public decimal ActualAmount { get; set; }
-
+        [Display(Name = "Differenz")]
+        [NotMapped]
+        public decimal AmountDifference => PlannedMonthlyAmount - ActualAmount;
+        
         [InverseProperty(nameof(MoneyBooking.BudgetItem))]
         public List<MoneyBooking> MoneyBookings { get; set; }
     }
