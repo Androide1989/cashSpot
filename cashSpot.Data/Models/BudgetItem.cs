@@ -22,5 +22,8 @@ namespace cashSpot.Data.Models {
         
         [InverseProperty(nameof(MoneyBooking.BudgetItem))]
         public List<MoneyBooking> MoneyBookings { get; set; }
+
+        [Display(Name = "Pflichtposten")]
+        public bool Mandatory { get; set; }
     }
 }
