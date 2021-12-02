@@ -21,11 +21,13 @@ namespace cashSpot.Pages.MoneyBookings
 
         public IActionResult OnGet()
         {
+            MoneyBooking = new MoneyBooking() { RecurringInterval = RecurringInterval.Monthly, ReccurdingIntervalMultiplier = 1 };
+
             return Page();
         }
 
         [BindProperty]
-        public MoneyBooking MoneyBooking { get; set; } = new MoneyBooking() { RecurringInterval = RecurringInterval.Monthly, ReccurdingIntervalMultiplier = 1 };
+        public MoneyBooking MoneyBooking { get; set; }  
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

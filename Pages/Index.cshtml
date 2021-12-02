@@ -8,49 +8,55 @@
     <h1 class="display-4">cashSpot</h1>
     <p>Dein Budget-Planner</p>
 
-    @if(Model.CalculatedBudged != null) {
-<table class="table table-bordered table-hover">
-    @foreach (var item in Model.CalculatedBudged.BudgetItems) {
+    @if (Model.CalculatedBudged != null) {
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Budget-Posten</th>
+                <th>Geplantes Budget (Monat)</th>
+                <th>Differenz (Monat)</th>
+                <th>Tatsächliche Einnahmen/Ausgaben (Monat)</th>
+            </tr>
+            @foreach (var item in Model.CalculatedBudged.BudgetItems) {
 
-    <tr>
-        <td>
-            @item.Name
-        </td>
-        <td>
-            @item.PlannedMonthlyAmount
-        </td>
-        <td>
-            @item.AmountDifference
-        </td>
-        <td>
-            @item.ActualAmount
-        </td>
-    </tr>
-    }
-<tr>
-    <td>
-        Nicht zugeordnete Einnahmen/Ausgaben
-    </td>
-    <td> 
-    </td>
-    <td> 
-    </td>
-    <td>
-        @Model.CalculatedBudged.NonAssignedMoneyBookingAmount
-    </td>
-</tr>
-<tr>
-    <td>
-        Saldo
-    </td>
-    <td>
-    </td>
-    <td>
-    </td>
-    <td>
-        @Model.CalculatedBudged.Balance
-    </td>
-</tr>
-</table>
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.PlannedMonthlyAmount
+                    </td>
+                    <td>
+                        @item.AmountDifference
+                    </td>
+                    <td>
+                        @item.ActualAmount
+                    </td>
+                </tr>
             }
+            <tr>
+                <td>
+                    Nicht zugeordnete Einnahmen/Ausgaben
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    @Model.CalculatedBudged.NonAssignedMoneyBookingAmount
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Saldo
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    @Model.CalculatedBudged.Balance
+                </td>
+            </tr>
+        </table>
+    }
 </div>

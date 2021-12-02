@@ -28,6 +28,7 @@ namespace cashSpot.Data.Models {
         public bool IsReccuring => RecurringInterval != RecurringInterval.None;
 
         public int? BudgetItemId { get; set; }
+        [Display(Name = "Budget-Posten")]
         [ForeignKey(nameof(BudgetItemId))]
         public BudgetItem BudgetItem { get; set; }
     }

@@ -1,7 +1,9 @@
 ﻿@page
+@using cashSpot.Data.Models;
 @model cashSpot.Pages.MoneyBookings.CreateModel
+@inject cashSpot.Data.CashSpotContext context;
 
-<h4>MoneyBooking</h4>
+<h4>Einnahme/Ausgabe</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,13 +30,19 @@
                 <span asp-validation-for="MoneyBooking.ReccurdingIntervalMultiplier" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="MoneyBooking.BudgetItem" class="control-label"></label>
+                <select class="form-select"  asp-for="MoneyBooking.BudgetItemId" asp-items="@(new SelectList(context.BudgetItem.ToList(), nameof(BudgetItem.Id), nameof(BudgetItem.Name)))">
+                    <option value="@null">Keiner</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Passt" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Zurück zur Übersicht</a>
 </div>
 
